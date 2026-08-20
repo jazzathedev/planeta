@@ -1,0 +1,64 @@
+{
+	"sites": [
+		{
+			"id": "utah",
+			"name": "Utah Desert Remote Observatory",
+			"place": "Beryl Junction, Great Basin Desert, Utah, USA",
+			"lat": 37.7378,
+			"lon": -113.6975,
+			"elevation_m": 1570,
+			"timezone": "America/Denver",
+			"scopes": ["T2", "T5", "T11", "T14", "T20", "T21", "T25", "T26", "T68"]
+		},
+		{
+			"id": "sso",
+			"name": "Siding Spring Observatory",
+			"place": "Coonabarabran, NSW, Australia",
+			"lat": -31.2733,
+			"lon": 149.0644,
+			"elevation_m": 1122,
+			"timezone": "Australia/Sydney",
+			"scopes": ["T8", "T10", "T17", "T30", "T32", "T33", "T59"]
+		},
+		{
+			"id": "sro",
+			"name": "Sierra Remote Observatory",
+			"place": "Auberry, California, USA",
+			"lat": 37.07,
+			"lon": -119.4,
+			"elevation_m": 1405,
+			"timezone": "America/Los_Angeles",
+			"scopes": ["T24"]
+		},
+		{
+			"id": "aos",
+			"name": "Astrocamp Observatory",
+			"place": "Nerpio, Spain",
+			"lat": 38.1653,
+			"lon": -2.3264,
+			"elevation_m": 1650,
+			"timezone": "Europe/Madrid",
+			"scopes": ["T18"]
+		},
+		{
+			"id": "eee",
+			"name": "Entre Encinas y Estrellas",
+			"place": "Fregenal de la Sierra, Spain",
+			"lat": 38.1697,
+			"lon": -6.6428,
+			"elevation_m": 560,
+			"timezone": "Europe/Madrid",
+			"scopes": ["T80"]
+		},
+		{
+			"id": "dsc",
+			"name": "Deep Sky Chile",
+			"place": "Rio Hurtado Valley, Chile",
+			"lat": -30.4728,
+			"lon": -70.7647,
+			"elevation_m": 1700,
+			"timezone": "America/Santiago",
+			"scopes": ["T70", "T71", "T72", "T73", "T75"]
+		}
+	]
+}
