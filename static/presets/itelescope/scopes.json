@@ -378,5 +378,422 @@
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/245471-telescope-t68"
+	},
+	{
+		"id": "T8",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi FSQ ED",
+			"design": "Petzval Apochromat Astrograph",
+			"apertureSize": 106,
+			"focalLength": 530,
+			"fRatio": 5.0
+		},
+		"camera": {
+			"name": "FLI Microline 16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [238.8, 238.8],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "EXO", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 20
+			},
+			{
+				"az": [180, 360],
+				"minAlt": 60
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231911-telescope-8"
+	},
+	{
+		"id": "T9",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Tele Vue NP127fli Refractor",
+			"design": "4-Element Nagler-Petzval APO Astrograph",
+			"apertureSize": 127,
+			"focalLength": 680,
+			"fRatio": 5.3
+		},
+		"camera": {
+			"name": "FLI Proline 16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [188, 188],
+		"maxExposure": 900,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 50
+			},
+			{
+				"az": [180, 270],
+				"minAlt": 40
+			},
+			{
+				"az": [270, 360],
+				"minAlt": 20
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231912-telescope-9"
+	},
+	{
+		"id": "T10",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi TOA-130",
+			"design": "Apochromatic Refractor",
+			"apertureSize": 130,
+			"focalLength": 762,
+			"fRatio": 5.9
+		},
+		"camera": {
+			"name": "STX-16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [166.2, 166.2],
+		"maxExposure": 1800,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 30
+			},
+			{
+				"az": [180, 360],
+				"minAlt": 40
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/248501-telescope-10"
+	},
+	{
+		"id": "T17",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 17\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 432,
+			"focalLength": 2939,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [9576, 6388],
+			"oneShotColour": false
+		},
+		"fov": [42.4, 28.3],
+		"maxExposure": 240,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["Luminance", "Clear", "Red", "Green", "Blue", "Ha", "OIII", "SII"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 60
+			},
+			{
+				"az": [180, 270],
+				"minAlt": 30
+			},
+			{
+				"az": [270, 360],
+				"minAlt": 20
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231915-telescope-17"
+	},
+	{
+		"id": "T30",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 20\" (0.51m) CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 508,
+			"focalLength": 2262,
+			"fRatio": 4.0
+		},
+		"camera": {
+			"name": "FLI-PL6303E",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [3072, 2048],
+			"oneShotColour": false
+		},
+		"fov": [27.8, 41.6],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": [
+			"Luminance",
+			"Red",
+			"Green",
+			"Blue",
+			"Ha",
+			"SII",
+			"OIII",
+			"U",
+			"B",
+			"V",
+			"Rc",
+			"Ic"
+		],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 25
+			},
+			{
+				"az": [180, 360],
+				"minAlt": 40
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231917-telescope-30"
+	},
+	{
+		"id": "T31",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 20\" (0.51m) CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 510,
+			"focalLength": 2259,
+			"fRatio": 4.4
+		},
+		"camera": {
+			"name": "FLI-PL09000",
+			"type": "CCD",
+			"pixelSize": 12.0,
+			"resolution": [3056, 3056],
+			"oneShotColour": false
+		},
+		"fov": [55.9, 55.9],
+		"maxExposure": 900,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "Rc", "Ic"],
+		"elevationLimits": [
+			{
+				"az": [0, 90],
+				"minAlt": 50
+			},
+			{
+				"az": [90, 270],
+				"minAlt": 20
+			},
+			{
+				"az": [270, 360],
+				"minAlt": 50
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231918-telescope-31"
+	},
+	{
+		"id": "T32",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 17\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 431,
+			"focalLength": 2912,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [9576, 6388],
+			"oneShotColour": false
+		},
+		"fov": [42.4, 28.3],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "Ic"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 20
+			},
+			{
+				"az": [180, 360],
+				"minAlt": 40
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231919-telescope-32"
+	},
+	{
+		"id": "T33",
+		"site": "sso",
+		"type": "free",
+		"maxFreeSessionLength": 30,
+		"optics": {
+			"ota": "12.5\" - 320mm RCOS by Star Instruments",
+			"design": "Ritchey-Chrétien - Closed Carbon Tube",
+			"apertureSize": 320,
+			"focalLength": 2885,
+			"fRatio": 9.0
+		},
+		"camera": {
+			"name": "Apogee Alta U16",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [37, 37],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 90],
+				"minAlt": 50
+			},
+			{
+				"az": [90, 200],
+				"minAlt": 20
+			},
+			{
+				"az": [200, 360],
+				"minAlt": 50
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231920-telescope-33"
+	},
+	{
+		"id": "T59",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 20\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 510,
+			"focalLength": 3411,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "FLI Proline 16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [37.2, 37.2],
+		"maxExposure": 900,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "IcZ"],
+		"elevationLimits": [
+			{
+				"az": [0, 180],
+				"minAlt": 40
+			},
+			{
+				"az": [180, 270],
+				"minAlt": 20
+			},
+			{
+				"az": [270, 360],
+				"minAlt": 40
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/254307-telescope-59"
+	},
+	{
+		"id": "T69",
+		"site": "sso",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Celestron RASA 11\" 279mm",
+			"design": "Rowe Akerman Shmidt Astrograph",
+			"apertureSize": 279,
+			"focalLength": 620,
+			"fRatio": 2.2
+		},
+		"camera": {
+			"name": "QHY168C",
+			"type": "CMOS",
+			"pixelSize": 4.8,
+			"resolution": [4210, 3680],
+			"oneShotColour": true
+		},
+		"fov": [131.4, 87.6],
+		"maxExposure": 240,
+		"binning": {
+			"allowed": [1],
+			"preferred": 1
+		},
+		"filters": ["Color"],
+		"elevationLimits": [
+			{
+				"az": [0, 50],
+				"minAlt": 50
+			},
+			{
+				"az": [50, 300],
+				"minAlt": 30
+			},
+			{
+				"az": [300, 360],
+				"minAlt": 50
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/251556-telescope-69"
 	}
 ]
