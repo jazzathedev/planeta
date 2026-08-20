@@ -1,0 +1,382 @@
+[
+	{
+		"id": "T2",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi TOA-150",
+			"design": "Apochromatic Refractor",
+			"apertureSize": 150,
+			"focalLength": 1105.1,
+			"fRatio": 7.3
+		},
+		"camera": {
+			"name": "QHY168C",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [4952, 3288],
+			"oneShotColour": true
+		},
+		"fov": [57.9, 38.5],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [1],
+			"preferred": 1
+		},
+		"filters": ["Color"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231901-telescope-2"
+	},
+	{
+		"id": "T5",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi Epsilon 250",
+			"design": "Hyperbolic Flat-Field Astrograph",
+			"apertureSize": 250,
+			"focalLength": 850,
+			"fRatio": 3.4
+		},
+		"camera": {
+			"name": "ST-10XME",
+			"type": "CCD",
+			"pixelSize": 6.8,
+			"resolution": [2184, 1472],
+			"oneShotColour": false
+		},
+		"fov": [60.6, 40.8],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Red", "Green", "Blue", "Ha", "SII", "OIII", "Clear", "B", "V", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 220],
+				"minAlt": 15
+			},
+			{
+				"az": [220, 320],
+				"minAlt": 34
+			},
+			{
+				"az": [320, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231902-telescope-5"
+	},
+	{
+		"id": "T11",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 20\" (0.51m) CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 510,
+			"focalLength": 2280,
+			"fRatio": 4.5
+		},
+		"camera": {
+			"name": "FLI ProLine PL11002M CCD",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4008, 2672],
+			"oneShotColour": false
+		},
+		"fov": [36.2, 54.3],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 240],
+				"minAlt": 15
+			},
+			{
+				"az": [240, 300],
+				"minAlt": 19
+			},
+			{
+				"az": [300, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231903-telescope-11"
+	},
+	{
+		"id": "T14",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi FSQ Fluorite",
+			"design": "Petzval Apochromat Astrograph",
+			"apertureSize": 106,
+			"focalLength": 530,
+			"fRatio": 5.0
+		},
+		"camera": {
+			"name": "SBIG STX-16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [238.8, 238.8],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231904-telescope-14"
+	},
+	{
+		"id": "T19",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 17\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 431,
+			"focalLength": 2937,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "FLI-PL16803",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [4096, 4096],
+			"oneShotColour": false
+		},
+		"fov": [43.2, 43.2],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "Exo", "V", "B"],
+		"elevationLimits": [
+			{
+				"az": [0, 50],
+				"minAlt": 15
+			},
+			{
+				"az": [50, 130],
+				"minAlt": 23
+			},
+			{
+				"az": [130, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/251589-telescope-19"
+	},
+	{
+		"id": "T20",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi FSQ106-ED",
+			"design": "Petzval Apochromat Astrograph",
+			"apertureSize": 106,
+			"focalLength": 530,
+			"fRatio": 5.0
+		},
+		"camera": {
+			"name": "ZWO ASI2400C",
+			"type": "CMOS",
+			"pixelSize": 5.94,
+			"resolution": [6072, 4042],
+			"oneShotColour": true
+		},
+		"fov": [155.8, 233.7],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1],
+			"preferred": 1
+		},
+		"filters": ["Lpro", "LUltimate", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231905-telescope-20"
+	},
+	{
+		"id": "T21",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 17\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 431,
+			"focalLength": 1940,
+			"fRatio": 4.5
+		},
+		"camera": {
+			"name": "FLI-PL6303E",
+			"type": "CCD",
+			"pixelSize": 9.0,
+			"resolution": [3072, 2048],
+			"oneShotColour": false
+		},
+		"fov": [32.8, 49.2],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 20],
+				"minAlt": 15
+			},
+			{
+				"az": [20, 180],
+				"minAlt": 30
+			},
+			{
+				"az": [180, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231906-telescope-21"
+	},
+	{
+		"id": "T25",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave CDK 20\"",
+			"design": "Corrected Dall-Kirkham",
+			"apertureSize": 508,
+			"focalLength": 3454,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "Player One Zeus 455 PRO",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [9576, 6388],
+			"oneShotColour": false
+		},
+		"fov": [36.2, 24.2],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/263027-telescope-25"
+	},
+	{
+		"id": "T26",
+		"site": "utah",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave Delta Rho 500",
+			"design": "Reflector",
+			"apertureSize": 508,
+			"focalLength": 1537,
+			"fRatio": 3.0
+		},
+		"camera": {
+			"name": "ZWO ASI 6200M Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [9576, 6388],
+			"oneShotColour": false
+		},
+		"fov": [80.4, 54],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/263040-telescope-26-t26-deep-space-utah-usa"
+	},
+	{
+		"id": "T68",
+		"site": "utah",
+		"type": "free",
+		"maxFreeSessionLength": 30,
+		"optics": {
+			"ota": "Celestron RASA 11\"",
+			"design": "Rowe Ackerman Schmidt Astrograph",
+			"apertureSize": 279,
+			"focalLength": 620,
+			"fRatio": 2.2
+		},
+		"camera": {
+			"name": "ZWO ASI071 MC",
+			"type": "CMOS",
+			"pixelSize": 4.78,
+			"resolution": [4994, 3284],
+			"oneShotColour": true
+		},
+		"fov": [132.0, 87.6],
+		"maxExposure": 240,
+		"binning": {
+			"allowed": [1],
+			"preferred": 1
+		},
+		"filters": ["Color"],
+		"elevationLimits": [
+			{
+				"az": [0, 60],
+				"minAlt": 15
+			},
+			{
+				"az": [60, 120],
+				"minAlt": 17
+			},
+			{
+				"az": [120, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/245471-telescope-t68"
+	}
+]
