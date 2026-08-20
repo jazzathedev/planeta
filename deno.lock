@@ -11,6 +11,7 @@
     "npm:eslint-plugin-svelte@^3.19.0": "3.23.0_eslint@10.8.1_svelte@5.56.9",
     "npm:eslint@^10.4.1": "10.8.1",
     "npm:globals@^17.6.0": "17.11.0",
+    "npm:husky@^9.1.7": "9.1.7",
     "npm:playwright@^1.60.0": "1.62.1",
     "npm:prettier-plugin-svelte@^4.1.0": "4.1.1_prettier@3.9.6_svelte@5.56.9",
     "npm:prettier@^3.8.3": "3.9.6",
@@ -1194,6 +1195,10 @@
     "globals@17.11.0": {
       "integrity": "sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw=="
     },
+    "husky@9.1.7": {
+      "integrity": "sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==",
+      "bin": true
+    },
     "ignore@5.3.2": {
       "integrity": "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g=="
     },
@@ -1895,6 +1900,7 @@
         "npm:eslint-plugin-svelte@^3.19.0",
         "npm:eslint@^10.4.1",
         "npm:globals@^17.6.0",
+        "npm:husky@^9.1.7",
         "npm:playwright@^1.60.0",
         "npm:prettier-plugin-svelte@^4.1.0",
         "npm:prettier@^3.8.3",
