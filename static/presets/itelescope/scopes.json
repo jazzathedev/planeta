@@ -12,13 +12,13 @@
 			"fRatio": 7.3
 		},
 		"camera": {
-			"name": "QHY168C",
+			"name": "QHY268C",
 			"type": "CMOS",
 			"pixelSize": 3.76,
-			"resolution": [4952, 3288],
+			"resolution": [6280, 4210],
 			"oneShotColour": true
 		},
-		"fov": [57.9, 38.5],
+		"fov": [72.6, 48.6],
 		"maxExposure": 300,
 		"binning": {
 			"allowed": [1],
@@ -40,13 +40,13 @@
 		"maxFreeSessionLength": 60,
 		"optics": {
 			"ota": "Takahashi Epsilon 250",
-			"design": "Hyperbolic Flat-Field Astrograph",
+			"design": "Hyperbolic Flat-Field",
 			"apertureSize": 250,
 			"focalLength": 850,
 			"fRatio": 3.4
 		},
 		"camera": {
-			"name": "ST-10XME",
+			"name": "SBIG ST-10XME",
 			"type": "CCD",
 			"pixelSize": 6.8,
 			"resolution": [2184, 1472],
@@ -61,16 +61,12 @@
 		"filters": ["Red", "Green", "Blue", "Ha", "SII", "OIII", "Clear", "B", "V", "I"],
 		"elevationLimits": [
 			{
-				"az": [0, 220],
+				"az": [0, 360],
 				"minAlt": 15
 			},
 			{
 				"az": [220, 320],
 				"minAlt": 34
-			},
-			{
-				"az": [320, 360],
-				"minAlt": 15
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/231902-telescope-5"
@@ -81,20 +77,20 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 20\" (0.51m) CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK20",
+			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 510,
 			"focalLength": 2280,
 			"fRatio": 4.5
 		},
 		"camera": {
-			"name": "FLI ProLine PL11002M CCD",
+			"name": "FLI ProLine PL11002M",
 			"type": "CCD",
 			"pixelSize": 9.0,
 			"resolution": [4008, 2672],
 			"oneShotColour": false
 		},
-		"fov": [36.2, 54.3],
+		"fov": [54.3, 36.2],
 		"maxExposure": 600,
 		"binning": {
 			"allowed": [1, 2],
@@ -103,16 +99,12 @@
 		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
 		"elevationLimits": [
 			{
-				"az": [0, 240],
+				"az": [0, 360],
 				"minAlt": 15
 			},
 			{
 				"az": [240, 300],
 				"minAlt": 19
-			},
-			{
-				"az": [300, 360],
-				"minAlt": 15
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/231903-telescope-11"
@@ -124,7 +116,7 @@
 		"maxFreeSessionLength": 60,
 		"optics": {
 			"ota": "Takahashi FSQ Fluorite",
-			"design": "Petzval Apochromat Astrograph",
+			"design": "Petzval Apochromat Refractor",
 			"apertureSize": 106,
 			"focalLength": 530,
 			"fRatio": 5.0
@@ -142,7 +134,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII", "V"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -199,8 +191,8 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Takahashi FSQ106-ED",
-			"design": "Petzval Apochromat Astrograph",
+			"ota": "Takahashi FSQ-ED",
+			"design": "Petzval Apochromat Refractor",
 			"apertureSize": 106,
 			"focalLength": 530,
 			"fRatio": 5.0
@@ -212,8 +204,8 @@
 			"resolution": [6072, 4042],
 			"oneShotColour": true
 		},
-		"fov": [155.8, 233.7],
-		"maxExposure": 600,
+		"fov": [233.7, 155.8],
+		"maxExposure": 300,
 		"binning": {
 			"allowed": [1],
 			"preferred": 1
@@ -233,8 +225,8 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 17\" CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK17",
+			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 431,
 			"focalLength": 1940,
 			"fRatio": 4.5
@@ -255,16 +247,12 @@
 		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
 		"elevationLimits": [
 			{
-				"az": [0, 20],
+				"az": [0, 360],
 				"minAlt": 15
 			},
 			{
-				"az": [20, 180],
-				"minAlt": 30
-			},
-			{
-				"az": [180, 360],
-				"minAlt": 15
+				"az": [50, 130],
+				"minAlt": 23
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/231906-telescope-21"
@@ -275,14 +263,14 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave CDK 20\"",
+			"ota": "Planewave CDK20",
 			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 508,
 			"focalLength": 3454,
 			"fRatio": 6.8
 		},
 		"camera": {
-			"name": "Player One Zeus 455 PRO",
+			"name": "Player One Zeus 455M PRO",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [9576, 6388],
@@ -310,13 +298,13 @@
 		"maxFreeSessionLength": 60,
 		"optics": {
 			"ota": "Planewave Delta Rho 500",
-			"design": "Reflector",
+			"design": "Advanced Corrected Cassegrain Focus",
 			"apertureSize": 508,
 			"focalLength": 1537,
 			"fRatio": 3.0
 		},
 		"camera": {
-			"name": "ZWO ASI 6200M Pro",
+			"name": "ASI6200MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [9576, 6388],
@@ -350,10 +338,10 @@
 			"fRatio": 2.2
 		},
 		"camera": {
-			"name": "ZWO ASI071 MC",
+			"name": "ZWO ASI2600 Color",
 			"type": "CMOS",
-			"pixelSize": 4.78,
-			"resolution": [4994, 3284],
+			"pixelSize": 3.76,
+			"resolution": [6248, 4176],
 			"oneShotColour": true
 		},
 		"fov": [132.0, 87.6],
@@ -365,16 +353,12 @@
 		"filters": ["Color"],
 		"elevationLimits": [
 			{
-				"az": [0, 60],
+				"az": [0, 360],
 				"minAlt": 15
 			},
 			{
 				"az": [60, 120],
 				"minAlt": 17
-			},
-			{
-				"az": [120, 360],
-				"minAlt": 15
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/245471-telescope-t68"
@@ -386,7 +370,7 @@
 		"maxFreeSessionLength": 60,
 		"optics": {
 			"ota": "Takahashi FSQ ED",
-			"design": "Petzval Apochromat Astrograph",
+			"design": "Petzval Apochromat Refractor",
 			"apertureSize": 106,
 			"focalLength": 530,
 			"fRatio": 5.0
@@ -407,7 +391,7 @@
 		"filters": ["Luminance", "Red", "Green", "Blue", "EXO", "Ha", "SII", "OIII"],
 		"elevationLimits": [
 			{
-				"az": [0, 180],
+				"az": [0, 360],
 				"minAlt": 20
 			},
 			{
@@ -503,14 +487,14 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 17\" CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK17",
+			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 432,
 			"focalLength": 2939,
 			"fRatio": 6.8
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI6200MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [9576, 6388],
@@ -525,16 +509,16 @@
 		"filters": ["Luminance", "Clear", "Red", "Green", "Blue", "Ha", "OIII", "SII"],
 		"elevationLimits": [
 			{
+				"az": [0, 360],
+				"minAlt": 20
+			},
+			{
 				"az": [0, 180],
 				"minAlt": 60
 			},
 			{
 				"az": [180, 270],
 				"minAlt": 30
-			},
-			{
-				"az": [270, 360],
-				"minAlt": 20
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/231915-telescope-17"
@@ -545,8 +529,8 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 20\" (0.51m) CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK20",
+			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 508,
 			"focalLength": 2262,
 			"fRatio": 4.0
@@ -558,29 +542,16 @@
 			"resolution": [3072, 2048],
 			"oneShotColour": false
 		},
-		"fov": [27.8, 41.6],
+		"fov": [41.6, 27.8],
 		"maxExposure": 300,
 		"binning": {
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": [
-			"Luminance",
-			"Red",
-			"Green",
-			"Blue",
-			"Ha",
-			"SII",
-			"OIII",
-			"U",
-			"B",
-			"V",
-			"Rc",
-			"Ic"
-		],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "Rc", "I"],
 		"elevationLimits": [
 			{
-				"az": [0, 180],
+				"az": [0, 360],
 				"minAlt": 25
 			},
 			{
@@ -638,14 +609,14 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 17\" CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK17",
+			"design": "Corrected Dall-Kirkham ",
 			"apertureSize": 431,
 			"focalLength": 2912,
 			"fRatio": 6.8
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI6200MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [9576, 6388],
@@ -654,13 +625,13 @@
 		"fov": [42.4, 28.3],
 		"maxExposure": 300,
 		"binning": {
-			"allowed": [1, 2],
+			"allowed": [2],
 			"preferred": 1
 		},
-		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "Ic"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "I"],
 		"elevationLimits": [
 			{
-				"az": [0, 180],
+				"az": [0, 360],
 				"minAlt": 20
 			},
 			{
@@ -676,7 +647,7 @@
 		"type": "free",
 		"maxFreeSessionLength": 30,
 		"optics": {
-			"ota": "12.5\" - 320mm RCOS by Star Instruments",
+			"ota": "Star Instruments 12.5\" RCOS",
 			"design": "Ritchey-Chrétien - Closed Carbon Tube",
 			"apertureSize": 320,
 			"focalLength": 2885,
@@ -690,7 +661,7 @@
 			"oneShotColour": false
 		},
 		"fov": [37, 37],
-		"maxExposure": 600,
+		"maxExposure": 300,
 		"binning": {
 			"allowed": [1, 2],
 			"preferred": 1
@@ -698,12 +669,12 @@
 		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
 		"elevationLimits": [
 			{
-				"az": [0, 90],
-				"minAlt": 50
+				"az": [0, 360],
+				"minAlt": 20
 			},
 			{
-				"az": [90, 200],
-				"minAlt": 20
+				"az": [0, 90],
+				"minAlt": 50
 			},
 			{
 				"az": [200, 360],
@@ -718,8 +689,8 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 20\" CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK20",
+			"design": "Corrected Dall-Kirkham ",
 			"apertureSize": 510,
 			"focalLength": 3411,
 			"fRatio": 6.8
@@ -740,16 +711,16 @@
 		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "IcZ"],
 		"elevationLimits": [
 			{
+				"az": [0, 360],
+				"minAlt": 15
+			},
+			{
 				"az": [0, 180],
 				"minAlt": 40
 			},
 			{
-				"az": [180, 270],
-				"minAlt": 20
-			},
-			{
 				"az": [270, 360],
-				"minAlt": 40
+				"minAlt": 30
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/254307-telescope-59"
@@ -802,17 +773,17 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 24\" (0.61m) CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK24",
+			"design": "Corrected Dall-Kirkham ",
 			"apertureSize": 610,
 			"focalLength": 3962,
 			"fRatio": 6.5
 		},
 		"camera": {
-			"name": "Player One Zeus 455M Pro",
-			"type": "CCD",
+			"name": "Player One Zeus 455M PRO",
+			"type": "CMOS",
 			"pixelSize": 3.76,
-			"resolution": [4788, 3194],
+			"resolution": [9576, 6388],
 			"oneShotColour": false
 		},
 		"fov": [31.6, 21.1],
@@ -836,8 +807,8 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Planewave 12\" CDK",
-			"design": "Corrected Dall-Kirkham Astrograph",
+			"ota": "Planewave CDK12",
+			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 318,
 			"focalLength": 1683,
 			"fRatio": 5.3
@@ -845,8 +816,8 @@
 		"camera": {
 			"name": "QHY600M-PH-US Mono",
 			"type": "CMOS",
-			"pixelSize": 5,
-			"resolution": [4000, 3000],
+			"pixelSize": 3.76,
+			"resolution": [9576, 6388],
 			"oneShotColour": false
 		},
 		"fov": [100, 100],
@@ -870,21 +841,21 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Samyang 135mm F2.0",
+			"ota": "Samyang 135 mm @ f/3.5",
 			"design": "Camera lens",
 			"apertureSize": 65,
 			"focalLength": 129,
-			"fRatio": 2.8
+			"fRatio": 3.5
 		},
 		"camera": {
-			"name": "ASI1600MM Pro",
+			"name": "ASI2600MM Pro P25 (mono)",
 			"type": "CMOS",
-			"pixelSize": 3.8,
+			"pixelSize": 3.76,
 			"resolution": [6248, 4176],
 			"oneShotColour": false
 		},
 		"fov": [622.2, 415.8],
-		"maxExposure": 600,
+		"maxExposure": 300,
 		"binning": {
 			"allowed": [1, 2],
 			"preferred": 1
@@ -904,20 +875,20 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "Samyang 135mm F2.0",
+			"ota": "Samyang 135 mm @ f/3.5",
 			"design": "Camera lens",
 			"apertureSize": 65,
 			"focalLength": 129,
 			"fRatio": 3.5
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI2600MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [6248, 4176],
 			"oneShotColour": false
 		},
-		"fov": [598.2, 399.6],
+		"fov": [469.8, 355.2],
 		"maxExposure": 300,
 		"binning": {
 			"allowed": [1, 2],
@@ -926,12 +897,12 @@
 		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
 		"elevationLimits": [
 			{
-				"az": [0, 90],
-				"minAlt": 30
+				"az": [0, 360],
+				"minAlt": 5
 			},
 			{
-				"az": [90, 180],
-				"minAlt": 10
+				"az": [0, 90],
+				"minAlt": 30
 			},
 			{
 				"az": [180, 270],
@@ -951,13 +922,13 @@
 		"maxFreeSessionLength": 60,
 		"optics": {
 			"ota": "Takahashi Epsilon 180ED",
-			"design": "Hyberbolic, corrected Newtonian astrograph",
+			"design": "Hyperbolic Corrected Newtonian Astrograph",
 			"apertureSize": 180,
 			"focalLength": 500,
 			"fRatio": 2.8
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI2600MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [6248, 4176],
@@ -984,14 +955,14 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "PlaneWave CDK 20\"",
+			"ota": "Planewave CDK20",
 			"design": "Corrected Dall-Kirkham",
 			"apertureSize": 510,
 			"focalLength": 3411,
 			"fRatio": 6.8
 		},
 		"camera": {
-			"name": "ML16200",
+			"name": "FLI ML-16200",
 			"type": "CCD",
 			"pixelSize": 6,
 			"resolution": [4500, 3600],
@@ -1025,7 +996,7 @@
 			"fRatio": 7.2
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI2600MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
 			"resolution": [6248, 4176],
@@ -1052,17 +1023,17 @@
 		"type": "paid",
 		"maxFreeSessionLength": 60,
 		"optics": {
-			"ota": "ASAN250",
-			"design": "Newtonian",
+			"ota": "ASA N250",
+			"design": "Newtownian Astrograph",
 			"apertureSize": 250,
-			"focalLength": 893,
+			"focalLength": 950,
 			"fRatio": 3.8
 		},
 		"camera": {
-			"name": "ZWO ASI 6200MM Pro",
+			"name": "ASI6200MM Pro (mono)",
 			"type": "CMOS",
 			"pixelSize": 3.76,
-			"resolution": [4788, 3194],
+			"resolution": [9576, 6388],
 			"oneShotColour": false
 		},
 		"fov": [137.4, 91.8],
