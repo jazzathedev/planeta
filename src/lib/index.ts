@@ -19,6 +19,9 @@ export type Object = {
 	vmag: number | null;
 	bmag: number | null;
 	sb: number | null;
+	identifiers: string[] | null;
+	ic: number | null;
+	ngc: number | null;
 	messier: number | null;
 };
 
@@ -103,3 +106,7 @@ export function num(v?: string) {
 	const n = Number(v);
 	return Number.isNaN(n) ? null : n;
 }
+
+export const trimZero = (s: string) => {
+	return s.replace(/^[0]+/g, "");
+};
