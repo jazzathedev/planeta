@@ -1,6 +1,7 @@
 import {
 	num,
 	sexagesimalToDecimal,
+	trimZero,
 	TYPE_LABELS,
 	type Catalogue,
 	type csvRow,
@@ -8,9 +9,26 @@ import {
 import * as csv from "fast-csv";
 import * as fs from "node:fs";
 
-function prettyName(name: string) {
-	const nameRegex = /(NGC|IC)(\d+)/g;
-	return name.replace(nameRegex, "$1 $2");
+const ngcicRegex = /(NGC|IC)(\d+)/g;
+
+function prettyName(messier: string, ngc: string, names: string[], name: string) {
+	if (num(messier)) {
+		return `M ${trimZero(messier)}`;
+	}
+	if (num(ngc)) {
+		return `NGC ${trimZero(ngc)}`;
+	}
+	if (names.length > 0 && names[0] !== "") {
+		return names[0];
+	}
+
+	const nameMatch = [...name.matchAll(ngcicRegex)]?.[0];
+
+	if (nameMatch) {
+		return `${nameMatch[1]} ${trimZero(nameMatch[2].trimStart())}`;
+	}
+
+	return name;
 }
 
 function prettyCategory(type: string) {
@@ -19,6 +37,10 @@ function prettyCategory(type: string) {
 	if (["RfN", "DrkN"].includes(type)) return "dust";
 	if (["OCl", "GCl", "*Ass"].includes(type)) return "cluster";
 	return "other";
+}
+
+function splitCommas(value: string) {
+	return value.split(",").map((s) => s.trim());
 }
 
 const cataloguePath = "data/NGC.csv";
@@ -37,10 +59,13 @@ csv
 			return;
 		}
 
+		row.IC = row.IC || row.Name.match("IC(\\d+)")?.[1] || "";
+		row.NGC = row.NGC || row.Name.match("NGC(\\d+)")?.[1] || "";
+
 		catalogue.objects.push({
 			id: row.Name,
-			label: prettyName(row.Name),
-			names: row["Common names"].split(","),
+			label: prettyName(row.M, row.NGC, splitCommas(row["Common names"]), row.Name),
+			names: splitCommas(row["Common names"]),
 			type: TYPE_LABELS[row.Type as keyof typeof TYPE_LABELS],
 			category: prettyCategory(row.Type),
 			constellation: row.Const,
@@ -52,6 +77,9 @@ csv
 			vmag: num(row["V-Mag"]),
 			bmag: num(row["B-Mag"]),
 			sb: num(row["SurfBr"]),
+			identifiers: splitCommas(row.Identifiers),
+			ic: num(row.IC),
+			ngc: num(row.NGC),
 			messier: num(row["M"]),
 		});
 	})
