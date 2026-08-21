@@ -3,7 +3,7 @@ import * as fs from "node:fs";
 
 const wikiAPI = "https://en.wikipedia.org/w/api.php";
 
-async function getImageURL(title: string) {
+async function getWikiData(title: string) {
 	const params = new URLSearchParams({
 		action: "query",
 		format: "json",
@@ -30,13 +30,28 @@ async function getImageURL(title: string) {
 
 		if (!page.success) {
 			return undefined;
-		} else {
-			if (!page.data.missing) {
-				return page.data.thumbnail;
-			} else {
-				return undefined;
-			}
 		}
+		if (page.data.missing) {
+			return undefined;
+		}
+
+		// Build page URL from final title (after redirects) + optional fragment
+		// e.g. "Messier 101" -> redirects to "Pinwheel Galaxy" -> https://en.wikipedia.org/wiki/Pinwheel_Galaxy
+		const raw = data as {
+			query?: { redirects?: { from: string; to: string; tofragment?: string }[] };
+		};
+		let fragment: string | undefined;
+		if (raw.query?.redirects?.length) {
+			fragment = raw.query.redirects[raw.query.redirects.length - 1].tofragment;
+		}
+		const finalTitle: string = page.data.title;
+		const encodedTitle = encodeURIComponent(finalTitle.replace(/ /g, "_"));
+		const pageUrl = `https://en.wikipedia.org/wiki/${encodedTitle}${fragment ? `#${encodeURIComponent(fragment.replace(/ /g, "_"))}` : ""}`;
+
+		return {
+			thumbnail: page.data.thumbnail,
+			pageUrl,
+		};
 	} catch (e) {
 		console.error(`fetch failed for "${title}":`, e);
 		return undefined;
@@ -47,7 +62,9 @@ const catalogueString = fs.readFileSync("static/catalogue.json", "utf-8");
 const catalogue: Catalogue = JSON.parse(catalogueString);
 
 const imagesPath = "static/images.json";
-let catalogueImages: { [key: string]: { url: string; width: number; height: number } } = {};
+let catalogueImages: {
+	[key: string]: { url: string; width: number; height: number; pageUrl: string };
+} = {};
 if (fs.existsSync(imagesPath)) {
 	try {
 		catalogueImages = JSON.parse(fs.readFileSync(imagesPath, "utf-8"));
@@ -63,10 +80,15 @@ for (const obj of catalogue.objects) {
 		continue;
 	}
 	try {
-		const image = await getImageURL(obj.label);
-		if (image) {
-			catalogueImages[obj.id] = { url: image.source, width: image.width, height: image.height };
-			console.log(obj.id, image.source);
+		const data = await getWikiData(obj.label);
+		if (data?.thumbnail) {
+			catalogueImages[obj.id] = {
+				url: data.thumbnail.source,
+				width: data.thumbnail.width,
+				height: data.thumbnail.height,
+				pageUrl: data.pageUrl,
+			};
+			console.log(obj.id, data.thumbnail.source, "->", data.pageUrl);
 		} else {
 			console.log(obj.id, "no image found");
 		}
