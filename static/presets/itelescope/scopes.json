@@ -795,5 +795,289 @@
 			}
 		],
 		"reference": "https://support.itelescope.net/support/solutions/articles/251556-telescope-69"
+	},
+	{
+		"id": "T24",
+		"site": "sro",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 24\" (0.61m) CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 610,
+			"focalLength": 3962,
+			"fRatio": 6.5
+		},
+		"camera": {
+			"name": "Player One Zeus 455M Pro",
+			"type": "CCD",
+			"pixelSize": 3.76,
+			"resolution": [4788, 3194],
+			"oneShotColour": false
+		},
+		"fov": [31.6, 21.1],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 25
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231907-telescope-24"
+	},
+	{
+		"id": "T18",
+		"site": "aos",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave 12\" CDK",
+			"design": "Corrected Dall-Kirkham Astrograph",
+			"apertureSize": 318,
+			"focalLength": 1683,
+			"fRatio": 5.3
+		},
+		"camera": {
+			"name": "QHY600M-PH-US Mono",
+			"type": "CMOS",
+			"pixelSize": 5,
+			"resolution": [4000, 3000],
+			"oneShotColour": false
+		},
+		"fov": [100, 100],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 40
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/231910-telescope-18"
+	},
+	{
+		"id": "T80",
+		"site": "eee",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Samyang 135mm F2.0",
+			"design": "Camera lens",
+			"apertureSize": 65,
+			"focalLength": 129,
+			"fRatio": 2.8
+		},
+		"camera": {
+			"name": "ASI1600MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.8,
+			"resolution": [6248, 4176],
+			"oneShotColour": false
+		},
+		"fov": [622.2, 415.8],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 30
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/254953-telescope-80"
+	},
+	{
+		"id": "T70",
+		"site": "dsc",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Samyang 135mm F2.0",
+			"design": "Camera lens",
+			"apertureSize": 65,
+			"focalLength": 129,
+			"fRatio": 3.5
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [6248, 4176],
+			"oneShotColour": false
+		},
+		"fov": [598.2, 399.6],
+		"maxExposure": 300,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 90],
+				"minAlt": 30
+			},
+			{
+				"az": [90, 180],
+				"minAlt": 10
+			},
+			{
+				"az": [180, 270],
+				"minAlt": 20
+			},
+			{
+				"az": [270, 360],
+				"minAlt": 30
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/251171-telescope-70"
+	},
+	{
+		"id": "T71",
+		"site": "dsc",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Takahashi Epsilon 180ED",
+			"design": "Hyberbolic, corrected Newtonian astrograph",
+			"apertureSize": 180,
+			"focalLength": 500,
+			"fRatio": 2.8
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [6248, 4176],
+			"oneShotColour": false
+		},
+		"fov": [161.4, 108],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/251753-telescope-71"
+	},
+	{
+		"id": "T72",
+		"site": "dsc",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "PlaneWave CDK 20\"",
+			"design": "Corrected Dall-Kirkham",
+			"apertureSize": 510,
+			"focalLength": 3411,
+			"fRatio": 6.8
+		},
+		"camera": {
+			"name": "ML16200",
+			"type": "CCD",
+			"pixelSize": 6,
+			"resolution": [4500, 3600],
+			"oneShotColour": false
+		},
+		"fov": [26.93, 21.53],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "V", "B", "R", "I"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/254436-telescope-72"
+	},
+	{
+		"id": "T73",
+		"site": "dsc",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "Planewave CDK14",
+			"design": "Corrected Dall-Kirkham",
+			"apertureSize": 356,
+			"focalLength": 2563,
+			"fRatio": 7.2
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [6248, 4176],
+			"oneShotColour": false
+		},
+		"fov": [31.8, 21],
+		"maxExposure": 240,
+		"binning": {
+			"allowed": [1, 2],
+			"preferred": 1
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/261371-telescope-t73"
+	},
+	{
+		"id": "T75",
+		"site": "dsc",
+		"type": "paid",
+		"maxFreeSessionLength": 60,
+		"optics": {
+			"ota": "ASAN250",
+			"design": "Newtonian",
+			"apertureSize": 250,
+			"focalLength": 893,
+			"fRatio": 3.8
+		},
+		"camera": {
+			"name": "ZWO ASI 6200MM Pro",
+			"type": "CMOS",
+			"pixelSize": 3.76,
+			"resolution": [4788, 3194],
+			"oneShotColour": false
+		},
+		"fov": [137.4, 91.8],
+		"maxExposure": 600,
+		"binning": {
+			"allowed": [2],
+			"preferred": 2
+		},
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+		"elevationLimits": [
+			{
+				"az": [0, 360],
+				"minAlt": 15
+			}
+		],
+		"reference": "https://support.itelescope.net/support/solutions/articles/258871-telescope-t75"
 	}
 ]
