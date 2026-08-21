@@ -1,3 +1,5 @@
+import z from "zod";
+
 // place files you want to import through the `$lib` alias in this folder.
 export type Catalogue = {
 	source: string;
@@ -79,6 +81,37 @@ export const TYPE_LABELS = {
 	Other: "other",
 };
 
+export const WikiPageMissing = z.object({
+	ns: z.number(),
+	title: z.string(),
+	missing: z.literal(true),
+});
+
+export const WikiPageWithThumbnail = z.object({
+	pageid: z.number(),
+	ns: z.number(),
+	title: z.string(),
+	missing: z.literal(false).optional(),
+	thumbnail: z
+		.object({
+			source: z.string(),
+			width: z.number(),
+			height: z.number(),
+		})
+		.optional(),
+});
+
+export const WikiPage = z.discriminatedUnion("missing", [WikiPageMissing, WikiPageWithThumbnail]);
+
+export const WikiApiResponse = z.object({
+	batchcomplete: z.boolean(),
+	query: z.object({
+		pages: z.array(WikiPage).min(1),
+	}),
+});
+
+export const WikiFirstPage = WikiApiResponse.transform((data) => data.query.pages[0]);
+
 export function sexagesimalToDecimal(value: string): number {
 	const parts = value.trim().split(":");
 
@@ -110,3 +143,7 @@ export function num(v?: string) {
 export const trimZero = (s: string) => {
 	return s.replace(/^[0]+/g, "");
 };
+
+export function sleep(ms: number) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
