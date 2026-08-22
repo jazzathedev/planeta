@@ -48,6 +48,22 @@ async function getWikiData(title: string) {
 		const encodedTitle = encodeURIComponent(finalTitle.replace(/ /g, "_"));
 		const pageUrl = `https://en.wikipedia.org/wiki/${encodedTitle}${fragment ? `#${encodeURIComponent(fragment.replace(/ /g, "_"))}` : ""}`;
 
+		const thumbSource = page.data.thumbnail?.source;
+		// I feel like typescript should know that if thumbSource is truthy than page.data.thumbnail is not undefined
+
+		if (thumbSource && page.data.thumbnail?.source) {
+			const toClean = new URL(thumbSource);
+			toClean.search = "";
+			toClean.hash = "";
+			const cleaned = toClean.toString();
+			// but yet, it does not know that, and this fails
+			page.data.thumbnail.source = cleaned;
+		}
+		// Anyway, don't worry, I did a search and replace to remove these from the pre-existing images.json,
+		// so I didn't hit wikipedia's API a dozen thousand times. I'm also going through the images.json looking for
+		// thumbnails that just so happened to match something other than astronomy targets (like somehow there was
+		// one for "Indian Airlines Flight 814" because it's known as "IC 814")
+
 		return {
 			thumbnail: page.data.thumbnail,
 			pageUrl,
