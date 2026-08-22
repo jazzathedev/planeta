@@ -134,7 +134,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII", "V"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -244,7 +244,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -282,7 +282,7 @@
 			"allowed": [2],
 			"preferred": 2
 		},
-		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -316,7 +316,7 @@
 			"allowed": [2],
 			"preferred": 2
 		},
-		"filters": ["L", "R", "G", "B", "Ha", "SII", "OIII"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -548,7 +548,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "Rc", "I"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "U", "B", "V", "R", "I"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
@@ -586,7 +586,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "Rc", "Ic"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V", "R", "I"],
 		"elevationLimits": [
 			{
 				"az": [0, 90],
@@ -708,7 +708,7 @@
 			"allowed": [1, 2],
 			"preferred": 1
 		},
-		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "IcZ"],
+		"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "I"],
 		"elevationLimits": [
 			{
 				"az": [0, 360],
