@@ -1,0 +1,165 @@
+{
+	"IC0004": {},
+	"IC0121": {},
+	"IC0380": {},
+	"IC0814": {},
+	"IC1276": {},
+	"NGC0005": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/NGC5_-_SDSS_DR14.jpg/500px-NGC5_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0056": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/NGC_0056_DSS.jpg/500px-NGC_0056_DSS.jpg",
+		"width": 500,
+		"height": 406
+	},
+	"NGC0074": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NGC74_-_SDSS_DR14.jpg/500px-NGC74_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0111": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NGC_0111_SDSS.jpg/500px-NGC_0111_SDSS.jpg",
+		"width": 500,
+		"height": 413
+	},
+	"NGC0135": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/NGC_135_PanS.jpg/500px-NGC_135_PanS.jpg",
+		"width": 500,
+		"height": 364
+	},
+	"NGC0142": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/NGC_142_NGC_143_NGC_144_DECam.jpg/500px-NGC_142_NGC_143_NGC_144_DECam.jpg",
+		"width": 500,
+		"height": 468
+	},
+	"NGC0277": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/NGC277_-_SDSS_DR14.jpg/500px-NGC277_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0295": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/NGC295_-_SDSS_DR14.jpg/500px-NGC295_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0305": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NGC_305_PanS.jpg/500px-NGC_305_PanS.jpg",
+		"width": 500,
+		"height": 316
+	},
+	"NGC0396": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/NGC396_-_SDSS_DR14.jpg/500px-NGC396_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0421": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/NGC_0421_SDSS.jpg/500px-NGC_0421_SDSS.jpg",
+		"width": 500,
+		"height": 413
+	},
+	"NGC0453": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/NGC_0453_SDSS.jpg/500px-NGC_0453_SDSS.jpg",
+		"width": 500,
+		"height": 379
+	},
+	"NGC0529": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/NGC536_Galaxy_from_the_Mount_Lemmon_SkyCenter_Schulman_Telescope_courtesy_Adam_Block.jpg/500px-NGC536_Galaxy_from_the_Mount_Lemmon_SkyCenter_Schulman_Telescope_courtesy_Adam_Block.jpg",
+		"width": 500,
+		"height": 333
+	},
+	"NGC0603": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/NGC603_-_SDSS_DR14.jpg/500px-NGC603_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0607": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/NGC_0607_SDSS.jpg/500px-NGC_0607_SDSS.jpg",
+		"width": 500,
+		"height": 351
+	},
+	"NGC0610": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/NGC_0610_SDSS.jpg/500px-NGC_0610_SDSS.jpg",
+		"width": 500,
+		"height": 351
+	},
+	"NGC0611": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/NGC_0611_SDSS.jpg/500px-NGC_0611_SDSS.jpg",
+		"width": 500,
+		"height": 351
+	},
+	"NGC0629": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/NGC_629_PanS.jpg/500px-NGC_629_PanS.jpg",
+		"width": 500,
+		"height": 314
+	},
+	"NGC0728": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/NGC_0728_SDSS.jpg/500px-NGC_0728_SDSS.jpg",
+		"width": 500,
+		"height": 351
+	},
+	"NGC0737": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/NGC_733_NGC_736_NGC_738_NGC_740_legacy_dr10.jpg/500px-NGC_733_NGC_736_NGC_738_NGC_740_legacy_dr10.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0755": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/NGC_0764_DSS.jpg/500px-NGC_0764_DSS.jpg",
+		"width": 500,
+		"height": 406
+	},
+	"NGC0817": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/NGC817_-SDSS_DR14.png/500px-NGC817_-SDSS_DR14.png",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0843": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/NGC843_-_SDSS_DR14.jpg/500px-NGC843_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0915": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/NGC915_-_SDSS_DR14.jpg/500px-NGC915_-_SDSS_DR14.jpg",
+		"width": 500,
+		"height": 500
+	},
+	"NGC0930": {},
+	"NGC0940": {
+		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/NGC_952_PanS.jpg/500px-NGC_952_PanS.jpg",
+		"width": 500,
+		"height": 314
+	},
+	"NGC1848": {},
+	"NGC3012": {},
+	"NGC3020": {},
+	"NGC3051": {},
+	"NGC3097": {},
+	"NGC3116": {},
+	"NGC3123": {},
+	"NGC3176": {},
+	"NGC3186": {},
+	"NGC3222": {},
+	"NGC3229": {},
+	"NGC3231": {},
+	"NGC3244": {},
+	"NGC3317": {},
+	"NGC3355": {},
+	"NGC3387": {},
+	"NGC3401": {},
+	"NGC3472": {},
+	"NGC3484": {},
+	"NGC3498": {},
+	"NGC3500": {},
+	"NGC3520": {},
+	"NGC3615": {},
+	"NGC3618": {},
+	"NGC3708": {},
+	"NGC3709": {},
+	"NGC3710": {},
+	"NGC3825": {},
+	"NGC3853": {},
+	"NGC3915": {},
+	"NGC3944": {},
+	"NGC4000": {}
+}
