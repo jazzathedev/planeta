@@ -1,4 +1,6 @@
-import { sleep, WikiFirstPage, type Catalogue } from "$lib";
+import { WikiFirstPage } from "$lib/wikipedia";
+import { sleep } from "$lib";
+import { type Catalogue } from "$lib/catalogue";
 import * as fs from "node:fs";
 
 const wikiAPI = "https://en.wikipedia.org/w/api.php";
@@ -36,13 +38,13 @@ async function getWikiData(title: string) {
 		}
 
 		// Build page URL from final title (after redirects) + optional fragment
-		// e.g. "Messier 101" -> redirects to "Pinwheel Galaxy" -> https://en.wikipedia.org/wiki/Pinwheel_Galaxy
+		// e.g. "Messier 101" => redirects to "Pinwheel Galaxy" => https://en.wikipedia.org/wiki/Pinwheel_Galaxy
 		const raw = data as {
-			query?: { redirects?: { from: string; to: string; tofragment?: string }[] };
+			query?: { redirects?: { from: string; to: string; toFragment?: string }[] };
 		};
 		let fragment: string | undefined;
 		if (raw.query?.redirects?.length) {
-			fragment = raw.query.redirects[raw.query.redirects.length - 1].tofragment;
+			fragment = raw.query.redirects[raw.query.redirects.length - 1].toFragment;
 		}
 		const finalTitle: string = page.data.title;
 		const encodedTitle = encodeURIComponent(finalTitle.replace(/ /g, "_"));
@@ -81,6 +83,7 @@ const imagesPath = "static/images.json";
 let catalogueImages: {
 	[key: string]: { url: string; width: number; height: number; pageUrl: string };
 } = {};
+
 if (fs.existsSync(imagesPath)) {
 	try {
 		catalogueImages = JSON.parse(fs.readFileSync(imagesPath, "utf-8"));
@@ -104,7 +107,7 @@ for (const obj of catalogue.objects) {
 				height: data.thumbnail.height,
 				pageUrl: data.pageUrl,
 			};
-			console.log(obj.id, data.thumbnail.source, "->", data.pageUrl);
+			console.log(obj.id, data.thumbnail.source, "=>", data.pageUrl);
 		} else {
 			console.log(obj.id, "no image found");
 		}

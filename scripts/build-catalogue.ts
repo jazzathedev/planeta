@@ -1,15 +1,9 @@
-import {
-	num,
-	sexagesimalToDecimal,
-	trimZero,
-	TYPE_LABELS,
-	type Catalogue,
-	type csvRow,
-} from "../src/lib/index.ts";
+import { num, sexagesimalToDecimal, trimZero } from "$lib";
+import { TYPE_LABELS, type Catalogue, type csvRow } from "$lib/catalogue";
 import * as csv from "fast-csv";
 import * as fs from "node:fs";
 
-const ngcicRegex = /(NGC|IC)(\d+)/g;
+const ngcIcRegex = /(NGC|IC)(\d+)/g;
 
 function prettyName(messier: string, ngc: string, names: string[], name: string) {
 	if (num(messier)) {
@@ -22,7 +16,7 @@ function prettyName(messier: string, ngc: string, names: string[], name: string)
 		return names[0];
 	}
 
-	const nameMatch = [...name.matchAll(ngcicRegex)]?.[0];
+	const nameMatch = [...name.matchAll(ngcIcRegex)]?.[0];
 
 	if (nameMatch) {
 		return `${nameMatch[1]} ${trimZero(nameMatch[2].trimStart())}`;
