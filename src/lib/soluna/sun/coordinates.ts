@@ -34,11 +34,13 @@ export function getSunEquatorialCoordinates(daysSinceJ2000TT: number): Equatoria
 					(0.0130042 + julianCenturiesTT * (0.00000016 - julianCenturiesTT * 0.000000504))) +
 		deg2rad * 0.00256 * cos(lunarAscendingNodeLongitudeRad);
 
+	const ra = atan2(
+		cos(trueObliquityRad) * sin(apparentEclipticLongitudeRad),
+		cos(apparentEclipticLongitudeRad),
+	);
+
 	return {
-		rightAscension: atan2(
-			cos(trueObliquityRad) * sin(apparentEclipticLongitudeRad),
-			cos(apparentEclipticLongitudeRad),
-		),
+		rightAscension: (ra + 2 * Math.PI) % (2 * Math.PI),
 		declination: asin(sin(trueObliquityRad) * sin(apparentEclipticLongitudeRad)),
 	};
 }
