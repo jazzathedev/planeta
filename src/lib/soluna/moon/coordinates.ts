@@ -136,12 +136,14 @@ export function getMoonEquatorialCoordinates(
 		deg2rad * (meanLongitudeMoonDeg + sumLongitudeMicroDeg / 1e6 + nutationInLongitudeDeg);
 	const eclipticLatitudeRad = deg2rad * (sumLatitudeMicroDeg / 1e6);
 
+	const ra = atan2(
+		sin(apparentEclipticLongitudeRad) * cos(trueObliquityRad) -
+			tan(eclipticLatitudeRad) * sin(trueObliquityRad),
+		cos(apparentEclipticLongitudeRad),
+	);
+
 	return {
-		rightAscension: atan2(
-			sin(apparentEclipticLongitudeRad) * cos(trueObliquityRad) -
-				tan(eclipticLatitudeRad) * sin(trueObliquityRad),
-			cos(apparentEclipticLongitudeRad),
-		),
+		rightAscension: (ra + 2 * Math.PI) % (2 * Math.PI),
 		declination: asin(
 			sin(eclipticLatitudeRad) * cos(trueObliquityRad) +
 				cos(eclipticLatitudeRad) * sin(trueObliquityRad) * sin(apparentEclipticLongitudeRad),
