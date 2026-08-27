@@ -40,3 +40,11 @@ export const trimZero = (s: string) => {
 export function sleep(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+export function between(value: number, min: number, max: number) {
+	return value >= min && value <= max;
+}
+
+export function anyNaN(...values: number[]) {
+	return values.some((v) => isNaN(v));
+}
