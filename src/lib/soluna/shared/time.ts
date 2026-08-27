@@ -64,7 +64,7 @@ export function deltaTSeconds(daysSinceJ2000UT: number): number {
 	}
 
 	offset = (approxYear - 1820) / 100;
-	return -20 + 32 * (offset ^ 2) - 0.5628 * (2150 - approxYear);
+	return -20 + 32 * offset ** 2 - 0.5628 * (2150 - approxYear);
 }
 
 export function toTerrestrialTime(daysSinceJ2000UT: number): number {
