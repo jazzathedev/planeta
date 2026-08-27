@@ -1,7 +1,7 @@
 ## Individual calculations:
 
-1. [ ] Astronomical darkness period
-2. [ ] Moon phase/illumination as a percentage - location + time = phase
+1. [x] Astronomical darkness period
+2. [x] Moon phase/illumination as a percentage - location + time = phase
 3. [ ] Avoidance distance for Ha/SII, OIII, LRGB, OSC - location + time + filter + moon phase = avoidance distance
 4. [ ] Angular distance between Moon and Target - Location + time = angular distance
 5. [ ] Moon+Target RA/DEC - Location + time = moon RA/DEC
