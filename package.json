@@ -45,6 +45,7 @@
 		"wrangler": "^4.97.0"
 	},
 	"dependencies": {
+		"astronomy-engine": "^2.1.19",
 		"zod": "^4.4.3"
 	}
 }
