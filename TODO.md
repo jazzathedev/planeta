@@ -4,7 +4,7 @@
 2. [x] Moon phase/illumination as a percentage - location + time = phase
 3. [x] Avoidance distance for Ha/SII, OIII, LRGB, OSC - location + time + filter + moon phase = avoidance distance
 4. [x] Angular distance between Moon and Target - Location + time = angular distance
-5. [ ] Moon+Target RA/DEC - Location + time = moon RA/DEC
+5. [x] Current Ra/Dec of target - location + j2000.0 + time = jnow
 6. [ ] Percentage of frame - Scope FOV + Target size = percentage of frame
 7. [ ] Full Moon Happy Hour discount calculations - Session type + Moon illumination = discount https://www.itelescope.net/telescope-full-moon
 8. [ ] Robust timezone conversions

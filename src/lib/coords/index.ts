@@ -1,5 +1,6 @@
+import * as Astronomy from "astronomy-engine";
 import { anyNaN, between } from "$lib";
-import { getMoonEquatorialCoordinates } from "$lib/soluna";
+import { getMoonEquatorialCoordinates, instantToDaysSinceJ2000 } from "$lib/soluna";
 
 const { sin, cos, acos, PI } = Math;
 const maxRa = 2 * PI;
@@ -21,4 +22,15 @@ export function angularDistanceToMoon(ra: number, dec: number, daysSinceJ2000TT:
 	const { rightAscension, declination } = getMoonEquatorialCoordinates(daysSinceJ2000TT);
 
 	return angularDistance(ra, dec, rightAscension, declination);
+}
+
+export function raDecJ2000ToJNow(raHours: number, decDeg: number, instant: Temporal.Instant) {
+	// We are given milliseconds since midnight of Jan 1, 1970 UTC
+	// We want fractional days since J2000 UTC
+
+	const time = Astronomy.MakeTime(instantToDaysSinceJ2000(instant));
+	const rot = Astronomy.Rotation_EQJ_EQD(time);
+	const vec = Astronomy.VectorFromSphere(new Astronomy.Spherical(decDeg, raHours * 15, 1), time);
+	const rotated = Astronomy.RotateVector(rot, vec);
+	return Astronomy.EquatorFromVector(rotated);
 }
