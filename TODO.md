@@ -66,3 +66,103 @@ export function moonAvoidanceDeg(filter: FilterType, illumination: number): numb
 - [ ] "When does this target get good" - map out the days given target is good on given scopes, and when its free also
 - [ ] Mosaic importing from telescopius
 - [ ] Offer fleet preset or starting from anew
+
+## Less structured planning stuff
+
+I am trying to treat this project as a lot more... professional? Doing proper planning, thinking about tests and overall architecture, much more than my usual "I'm just going to write a bunch of code and hope it works"
+
+### Directional elevation limits
+
+- Scopes are, often in the case of iTelescope, not limited by just one minimum altitude. T68 for example has 2 elevation limits: 15 degrees on all azimuths, but 17 degrees between 60 and 120 degrees azimuth
+- If we chose the obvious approach of a single elevation limit, we may miss some targets that we CAN image, or claim we can image some that we CAN'T
+- It also means that a target's visibility can be split through the night; it can be visible from 2300 to 0200, but then hidden until 0300
+
+```ts
+type ElevationLimits = {
+	az: [number, number];
+	min_alt: number;
+}[];
+```
+
+- The `az` numbers can be 1. overlapped and 2. wrap around 360
+  - We will parse from top to bottom, so if we define T68 as 15 degrees from 0 to 360, we can later define 17 degrees from 60 to 120 and that will "replace" the "global" rule
+  - We can also define something like 270 to 90 degrees, it passes through the wrap around point but still works
+
+```ts
+function azInRange(az: number, [from, to]: [number, number]): boolean {
+	// I'll probably make this normalisation step a helper
+	const azimuth = ((az % 360) + 360) % 360;
+	// If we don't wrap around, we can just compare
+	if (from <= to) return azimuth >= from && azimuth <= to;
+	// Wrap around, so it's an OR
+	else return azimuth >= from || azimuth <= to;
+}
+
+// Not sure of Scope's full shape, but it will have ElevationLimits
+function minAltitudeAt(scope: Scope, azimuth: number): number {
+	let limit = 0;
+	for (const rule of scope.elevationLimits)
+		// This max is so that we always choose the highest elevation limit
+		// because, remember, we can "replace" the global rule
+		if (azInRange(azimuth, rule.az)) limit = Math.max(limit, rule.min_alt);
+	return limit;
+}
+```
+
+### Performance via splitting
+
+- We have to score several thousand targets, on dozens of scopes, in the browser, fast enough to support reactive UI. That means we have to be careful about how we do things
+- `NightTrack` will be per-site and per-night (nice, rhymes). This will contain the timestep duration (we can't do a continual sample so we need to break it into steps), the local apparent sidereal time at each step, the moon's RA/Dec/altitude at each step, and the illuminated fraction at mid-night (it doesn't change enough during the night to be worth storing)
+- `SiteTrack` will be per-site and per-target. Contains the alt/az of a target, as well as it's moon separation throughout the night
+- `TargetTrack` will apply `minAltitudeAt` to the `SiteTrack`, and figure out windows, usable hours, etc
+- We can use `SkyCache` to memoise `SiteTrack` and `TargetTrack`
+
+- We should also do alt/az by the hour angle, not by Astronomy Engine's function, because `NightTrack` already uses the local sidereal time, so a spherical transform is enough
+
+```ts
+// https://en.wikipedia.org/wiki/Sight_reduction
+let localHourAngle = (localSiderealTime - target.ra.toHours()) * 15;
+let altitude = asin(
+	sin(observer.lat) * sin(target.dec) + cos(target.dec) * cos(observer.lat) * cos(localHourAngle),
+);
+let azimuth = acos(
+	(sin(target.dec) - sin(altitude) * sin(observer.lat)) / (cos(altitude) * cos(observer.lat)),
+);
+azimuth = sin(azimuth) > 0 ? 360 - azimuth : azimuth;
+```
+
+- Precession can be applied once per night per target, since over 6 hours the position moves an insanely small amount
+
+### Ranking
+
+- Scoring targets is a hard problem, I am thinking we combine a "cool" score with an "odds" score:
+  - Cool (datetime independent): how good the picture is, based on framing, how well does the filter fit (aka an emission wants Ha/SII and OIII, a galaxy wants LRGB), how bright it is
+  - Odds (datetime dependent): altitude, window, moon info
+- We use both because a target could make for an amazing photo, but it's a really bad time to try and take said photo. The weighting for all of these is going to be HELL.
+
+### Plan generation
+
+The iTelescope plan file format:
+
+```
+; comment block carrying the reasoning
+#BillingMethod Session
+#tiff
+#repeat 2
+#count 4,3,3,3
+#interval 180,180,180,180
+#binning 1,1,1,1
+#filter Luminance,Red,Green,Blue
+;
+; Mosaic targets for ... (second comment block)
+;
+M 81<TAB>9.925881<TAB>69.065295
+#shutdown
+```
+
+### Catalogue corrections and overrides
+
+- We have the OpenNGC CSVs which we can convert to JSON and throw away information we don't need. We can also fold in their own corrections at build time.
+- We will have to fold in our own runtime corrections however, OpenNGC catalogues targets for science, not for imaging. For example, NGC 5457 is placed at `ra = 14.0535, dec = 54.3488` but to properly frame it, I would aim at `ra = 14.0524, dec = 54.3966`
+- This will be keyed either by `target` or `target@scope` because the best centre is field dependent: what puts the whole Veil in a 4 degree frame is not what centres the interesting part on a narrow one.
+- The catalogue is like 3MB so we can't store it in `localStorage`, so we will fetch it and let the browser cache it.
