@@ -1,19 +1,42 @@
-# Planeta
+# sv
 
-An astrophotography tool for planning your shoots.
-Planēta is Latin for "wandering star", now known as Planets.
-Planeta also helps Plan. Hence the name.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-It is focused on the service [iTelescope](https://www.itelescope.net/), but can, of course, be used for any list of targets, scopes, locations, and more.
+## Creating a project
 
-## Features
+If you're seeing this, you've probably already done this step. Congrats!
 
-- As of now, none. Please see the TODO.md file for current progress.
+```sh
+# create a new project
+npx sv create my-app
+```
 
-## License
+To recreate this project with the same configuration:
 
-Licensed under the AGPL-3.0-only license. See the LICENSE file for the full text, or [gnu.org](https://www.gnu.org/licenses/agpl-3.0.en.html)
+```sh
+# recreate this project
+pnpm dlx sv@0.17.0 create --template minimal --types ts --add prettier eslint vitest="usages:unit" sveltekit-adapter="adapter:cloudflare+cfTarget:workers" drizzle="database:d1" --install pnpm ./
+```
 
-## LLM Usage
+## Developing
 
-None. Full stop. No AI tool has ever touched this codebase.
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

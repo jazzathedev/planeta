@@ -14,7 +14,7 @@
 
 There will always be exceptions to these rules, but hopefully not too many.
 
-- ALL angles are in radians, not hours or degrees. If needed in one of those formats, convert and LABEL
+- ALL angles are in degrees where possible, not hours. If needed in another format, convert and LABEL
 - All coordinates are stored in J2000 equatorial coordinates, not ecliptic or horizontal
 - All times are INPUTTED as `Temporal` objects, which are milliseconds since midnight of Jan 1, 1970 UTC. Most calculations are done in Julian days since J2000 UTC
 - For night calculations, we will use `astronomicalDusk` to specify the start of astronomical night on the given date, and `astronomicalDawn` to specify the end of the previous night's astronomical night. Therefore we will have a simple `night` which is an alias for `astronomicalDusk` and `nightEnd` which is an alias for TOMORROW's `astronomicalDawn`, to allow for intuitive calculations.
@@ -22,7 +22,7 @@ There will always be exceptions to these rules, but hopefully not too many.
 
 ## Todo
 
-- [ ] Blank sv create
+- [x] Blank sv create
 - [ ] Core types:
   - [ ] Scope
   - [ ] Site
