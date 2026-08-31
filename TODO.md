@@ -23,10 +23,10 @@ There will always be exceptions to these rules, but hopefully not too many.
 ## Todo
 
 - [x] Blank sv create
-- [ ] Core types:
-  - [ ] Scope
-  - [ ] Site
-  - [ ] ElevationLimit
+- [x] Core types:
+  - [x] Scope
+  - [x] Site
+  - [x] ElevationLimit
   - [ ]
 - [ ] Type up maybe 2 scopes from 2 sites
 - [ ] Basic storage layer for localstorage loading and saving
