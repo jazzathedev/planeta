@@ -1,0 +1,76 @@
+{
+	"$ref": "#/definitions/SiteSchema",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"Site": {
+			"additionalProperties": false,
+			"properties": {
+				"elevationMetres": {
+					"type": "number"
+				},
+				"enabled": {
+					"type": "boolean"
+				},
+				"id": {
+					"description": "E.g. U94, EEyE",
+					"type": "string"
+				},
+				"latitude": {
+					"type": "number"
+				},
+				"locationName": {
+					"type": "string"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"name": {
+					"type": "string"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"scopes": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"shortName": {
+					"type": "string"
+				},
+				"timezone": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"shortName",
+				"name",
+				"locationName",
+				"latitude",
+				"longitude",
+				"elevationMetres",
+				"timezone",
+				"scopes"
+			],
+			"type": "object"
+		},
+		"SiteSchema": {
+			"additionalProperties": false,
+			"properties": {
+				"$schema": {
+					"type": "string"
+				},
+				"sites": {
+					"items": {
+						"$ref": "#/definitions/Site"
+					},
+					"type": "array"
+				}
+			},
+			"required": ["$schema", "sites"],
+			"type": "object"
+		}
+	}
+}

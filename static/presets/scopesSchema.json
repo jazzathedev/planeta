@@ -1,0 +1,254 @@
+{
+	"$ref": "#/definitions/ScopeSchema",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ElevationLimit": {
+			"additionalProperties": false,
+			"properties": {
+				"azimuth": {
+					"items": {
+						"type": "number"
+					},
+					"maxItems": 2,
+					"minItems": 2,
+					"type": "array"
+				},
+				"minAltitude": {
+					"type": "number"
+				}
+			},
+			"required": ["minAltitude", "azimuth"],
+			"type": "object"
+		},
+		"Scope": {
+			"additionalProperties": false,
+			"properties": {
+				"angleDeg": {
+					"type": ["number", "null"]
+				},
+				"arcsecPerPixel": {
+					"type": "number"
+				},
+				"binning": {
+					"additionalProperties": false,
+					"properties": {
+						"allowed": {
+							"items": {
+								"type": "number"
+							},
+							"type": "array"
+						},
+						"preferred": {
+							"type": "number"
+						}
+					},
+					"required": ["allowed", "preferred"],
+					"type": "object"
+				},
+				"costType": {
+					"enum": ["free", "paid"],
+					"type": "string"
+				},
+				"defaultSession": {
+					"description": "30 for always-free scopes, 60 for paid scopes when free",
+					"type": "number"
+				},
+				"elevationLimits": {
+					"items": {
+						"$ref": "#/definitions/ElevationLimit"
+					},
+					"type": "array"
+				},
+				"enabled": {
+					"description": "Exclude from UI, ranking, etc",
+					"type": "boolean"
+				},
+				"filters": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"fovArcmin": {
+					"items": {
+						"type": "number"
+					},
+					"maxItems": 2,
+					"minItems": 2,
+					"type": "array"
+				},
+				"id": {
+					"description": "E.g. T68",
+					"type": "string"
+				},
+				"luminanceFilter": {
+					"description": "Usually `Clear` or `Luminance`",
+					"type": ["string", "null"]
+				},
+				"maxExposureSec": {
+					"type": "number"
+				},
+				"notes": {
+					"type": "string"
+				},
+				"optics": {
+					"additionalProperties": false,
+					"properties": {
+						"apertureMm": {
+							"type": "number"
+						},
+						"design": {
+							"type": "string"
+						},
+						"focalLengthMm": {
+							"type": "number"
+						},
+						"realFRatio": {
+							"type": "number"
+						}
+					},
+					"required": ["design", "apertureMm", "focalLengthMm", "realFRatio"],
+					"type": "object"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"reference": {
+					"type": "string"
+				},
+				"sensor": {
+					"additionalProperties": false,
+					"properties": {
+						"antiBloomGate": {
+							"type": ["boolean", "null"]
+						},
+						"cameraName": {
+							"type": ["string", "null"]
+						},
+						"name": {
+							"type": ["string", "null"]
+						},
+						"oneShotColour": {
+							"type": "boolean"
+						},
+						"pixelArray": {
+							"description": "Unbinned",
+							"items": {
+								"type": "number"
+							},
+							"maxItems": 2,
+							"minItems": 2,
+							"type": "array"
+						},
+						"pixelSizeUm": {
+							"description": "Unbinned",
+							"type": "number"
+						},
+						"sensorSizeMm": {
+							"description": "Unbinned",
+							"items": {
+								"type": "number"
+							},
+							"maxItems": 2,
+							"minItems": 2,
+							"type": "array"
+						},
+						"type": {
+							"enum": ["CCD", "CMOS"],
+							"type": "string"
+						}
+					},
+					"required": [
+						"name",
+						"cameraName",
+						"type",
+						"antiBloomGate",
+						"pixelSizeUm",
+						"pixelArray",
+						"sensorSizeMm",
+						"oneShotColour"
+					],
+					"type": "object"
+				},
+				"siteId": {
+					"description": "E.g. U94, EEyE",
+					"type": "string"
+				},
+				"subLength": {
+					"additionalProperties": false,
+					"properties": {
+						"calibrationLibrary": {
+							"anyOf": [
+								{
+									"items": {
+										"type": "number"
+									},
+									"type": "array"
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"maxSeconds": {
+							"type": "number"
+						},
+						"minSeconds": {
+							"type": "number"
+						},
+						"narrowMaxSeconds": {
+							"type": ["number", "null"]
+						},
+						"narrowMinSeconds": {
+							"type": ["number", "null"]
+						}
+					},
+					"required": [
+						"calibrationLibrary",
+						"minSeconds",
+						"narrowMinSeconds",
+						"maxSeconds",
+						"narrowMaxSeconds"
+					],
+					"type": "object"
+				}
+			},
+			"required": [
+				"id",
+				"siteId",
+				"costType",
+				"defaultSession",
+				"optics",
+				"sensor",
+				"arcsecPerPixel",
+				"fovArcmin",
+				"angleDeg",
+				"maxExposureSec",
+				"binning",
+				"filters",
+				"luminanceFilter",
+				"elevationLimits",
+				"subLength",
+				"notes",
+				"reference"
+			],
+			"type": "object"
+		},
+		"ScopeSchema": {
+			"additionalProperties": false,
+			"properties": {
+				"$schema": {
+					"type": "string"
+				},
+				"scopes": {
+					"items": {
+						"$ref": "#/definitions/Scope"
+					},
+					"type": "array"
+				}
+			},
+			"required": ["$schema", "scopes"],
+			"type": "object"
+		}
+	}
+}

@@ -23,9 +23,10 @@ export type Scope = {
 		realFRatio: number;
 	};
 	sensor: {
-		name: string;
+		name: string | null;
+		cameraName: string | null;
 		type: "CCD" | "CMOS";
-		antiBloomGate: boolean;
+		antiBloomGate: boolean | null;
 		/**Unbinned */
 		pixelSizeUm: number;
 		/**Unbinned */
@@ -49,8 +50,9 @@ export type Scope = {
 	subLength: {
 		calibrationLibrary: number[] | null;
 		minSeconds: number;
-		narrowMinSeconds: number;
+		narrowMinSeconds: number | null;
 		maxSeconds: number;
+		narrowMaxSeconds: number | null;
 	};
 	notes: string;
 	reference: string;
@@ -66,9 +68,19 @@ export type Site = {
 	longitude: number;
 	elevationMetres: number;
 	timezone: string;
-	scopes: Scope[];
+	scopes: string[];
 	enabled?: boolean;
 	reason?: string;
+};
+
+export type ScopeSchema = {
+	$schema: string;
+	scopes: Scope[];
+};
+
+export type SiteSchema = {
+	$schema: string;
+	sites: Site[];
 };
 
 export const NARROW_BANDS = ["Ha", "SII", "OIII"];
