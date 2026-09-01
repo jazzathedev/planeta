@@ -1,0 +1,180 @@
+{
+	"$schema": "../scopesSchema.json",
+	"scopes": [
+		{
+			"id": "T33",
+			"siteId": "Q62",
+			"costType": "free",
+			"defaultSession": 30,
+			"optics": {
+				"design": "Ritchey-Chrétien - Closed Carbon Tube",
+				"apertureMm": 320,
+				"focalLengthMm": 2885,
+				"realFRatio": 9.0
+			},
+			"sensor": {
+				"name": null,
+				"cameraName": "Apogee Alta U16",
+				"type": "CCD",
+				"antiBloomGate": true,
+				"pixelSizeUm": 9,
+				"pixelArray": [4096, 4096],
+				"sensorSizeMm": [36.8, 36.8],
+				"oneShotColour": false
+			},
+			"arcsecPerPixel": 0.54,
+			"fovArcmin": [37, 37],
+			"angleDeg": 359,
+			"maxExposureSec": 300,
+			"binning": { "allowed": [1, 2], "preferred": 1 },
+			"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII"],
+			"luminanceFilter": "Luminance",
+			"elevationLimits": [
+				{ "azimuth": [0, 360], "minAltitude": 15 },
+				{
+					"azimuth": [0, 45],
+					"minAltitude": 50
+				},
+				{ "azimuth": [45, 90], "minAltitude": 30 },
+				{ "azimuth": [225, 360], "minAltitude": 40 }
+			],
+			"subLength": {
+				"calibrationLibrary": [60, 120, 180, 300, 600],
+				"minSeconds": 60,
+				"narrowMinSeconds": 60,
+				"maxSeconds": 300,
+				"narrowMaxSeconds": 600
+			},
+			"notes": "Recommended exposure: 300s for LRGB, 600s for Narrow band",
+			"reference": "https://web.archive.org/web/20260831030208/https://support.itelescope.net/support/solutions/articles/231920-telescope-33"
+		},
+		{
+			"id": "T59",
+			"siteId": "Q62",
+			"costType": "paid",
+			"defaultSession": 60,
+			"optics": {
+				"design": "Corrected Dall-Kirkham",
+				"apertureMm": 510,
+				"focalLengthMm": 3411,
+				"realFRatio": 6.8
+			},
+			"sensor": {
+				"name": null,
+				"cameraName": "FLI Proline 16803",
+				"type": "CCD",
+				"antiBloomGate": null,
+				"pixelSizeUm": 9,
+				"pixelArray": [4096, 4096],
+				"sensorSizeMm": [36.8, 36.8],
+				"oneShotColour": false
+			},
+			"arcsecPerPixel": 0.54,
+			"fovArcmin": [37.2, 37.2],
+			"angleDeg": 90,
+			"maxExposureSec": 900,
+			"binning": {
+				"allowed": [1, 2],
+				"preferred": 1
+			},
+			"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "IcZ"],
+			"luminanceFilter": "Luminance",
+			"elevationLimits": [
+				{ "azimuth": [0, 360], "minAltitude": 15 },
+				{ "azimuth": [0, 135], "minAltitude": 40 },
+				{ "azimuth": [135, 200], "minAltitude": 25 },
+				{ "azimuth": [270, 360], "minAltitude": 30 }
+			],
+			"subLength": {
+				"calibrationLibrary": null,
+				"minSeconds": 300,
+				"narrowMinSeconds": 300,
+				"maxSeconds": 900,
+				"narrowMaxSeconds": 900
+			},
+			"notes": "Can do very long exposures, up to 15 minutes",
+			"reference": "https://web.archive.org/web/20260901083221/https://support.itelescope.net/support/solutions/articles/254307-telescope-59"
+		},
+		{
+			"id": "T68",
+			"siteId": "U94",
+			"costType": "free",
+			"defaultSession": 30,
+			"optics": {
+				"design": "Rowe Ackerman Schmidt Astrograph",
+				"apertureMm": 279,
+				"focalLengthMm": 620,
+				"realFRatio": 2.2
+			},
+			"sensor": {
+				"name": "Sony IMX571",
+				"cameraName": "ZWO ASI2600 Color",
+				"type": "CMOS",
+				"antiBloomGate": null,
+				"pixelSizeUm": 3.76,
+				"pixelArray": [6248, 4176],
+				"sensorSizeMm": [23.6, 15.6],
+				"oneShotColour": true
+			},
+			"arcsecPerPixel": 1.25,
+			"fovArcmin": [130.2, 87],
+			"angleDeg": 277,
+			"maxExposureSec": 240,
+			"binning": { "allowed": [1], "preferred": 1 },
+			"filters": ["Colour"],
+			"luminanceFilter": null,
+			"elevationLimits": [
+				{ "azimuth": [0, 360], "minAltitude": 15 },
+				{ "azimuth": [60, 120], "minAltitude": 17 }
+			],
+			"subLength": {
+				"calibrationLibrary": [120, 240],
+				"minSeconds": 120,
+				"narrowMinSeconds": null,
+				"maxSeconds": 240,
+				"narrowMaxSeconds": null
+			},
+			"notes": "Large FITS files, 26MP",
+			"reference": "https://web.archive.org/web/20260831114604/https://support.itelescope.net/support/solutions/articles/245471-telescope-t68"
+		},
+		{
+			"id": "T14",
+			"siteId": "U94",
+			"costType": "paid",
+			"defaultSession": 60,
+			"optics": {
+				"design": "Petzval Apochromatic Refractor",
+				"apertureMm": 106,
+				"focalLengthMm": 530,
+				"realFRatio": 5.0
+			},
+			"sensor": {
+				"name": null,
+				"cameraName": "SBIG STX-16803",
+				"type": "CCD",
+				"antiBloomGate": true,
+				"pixelSizeUm": 9,
+				"pixelArray": [4096, 4096],
+				"sensorSizeMm": [36.8, 36.8],
+				"oneShotColour": false
+			},
+			"arcsecPerPixel": 3.5,
+			"fovArcmin": [238.8, 238.8],
+			"angleDeg": 90,
+			"maxExposureSec": 600,
+			"binning": { "allowed": [1, 2], "preferred": 1 },
+			"filters": ["Luminance", "Red", "Green", "Blue", "Ha", "SII", "OIII", "V"],
+			"luminanceFilter": "Luminance",
+			"elevationLimits": [{ "azimuth": [0, 360], "minAltitude": 15 }],
+			"subLength": {
+				"calibrationLibrary": null,
+				"minSeconds": 600,
+				"narrowMinSeconds": 600,
+				"maxSeconds": 900,
+				"narrowMaxSeconds": 900
+			},
+			"notes": "Dithering is recommended",
+			"reference": "https://web.archive.org/web/20260901112159/https://support.itelescope.net/support/solutions/articles/231904-telescope-14"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"$schema": "../sitesSchema.json",
+	"sites": [
+		{
+			"id": "Q62",
+			"shortName": "Sliding Spring",
+			"name": "Sliding Spring Observatory",
+			"locationName": "Warrumbungle National Park, NSW, Australia",
+			"latitude": -31.273321294935123,
+			"longitude": 149.06977670147418,
+			"elevationMetres": 1134,
+			"timezone": "Australia/Sydney",
+			"scopes": ["T8", "T10", "T17", "T30", "T32", "T33", "T59"],
+			"enabled": true
+		},
+		{
+			"id": "U94",
+			"shortName": "Utah",
+			"name": "Utah Desert Remote Observatory",
+			"locationName": "Great Basin Desert, Beryl Junction, Utah, USA",
+			"latitude": 37.7378,
+			"longitude": 113.6975,
+			"elevationMetres": 1570,
+			"timezone": "America/Denver",
+			"scopes": ["T2", "T5", "T11", "T14", "T20", "T21", "T25", "T26", "T68"]
+		}
+	]
+}

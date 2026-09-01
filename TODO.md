@@ -28,7 +28,7 @@ There will always be exceptions to these rules, but hopefully not too many.
   - [x] Site
   - [x] ElevationLimit
   - [ ]
-- [ ] Type up maybe 2 scopes from 2 sites
+- [x] Type up maybe 2 scopes from 2 sites
 - [ ] Basic storage layer for localstorage loading and saving
 - [ ] Storage into a database for cross-device syncing
 - [ ] Ephemeris layer
