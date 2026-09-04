@@ -29,7 +29,7 @@ There will always be exceptions to these rules, but hopefully not too many.
   - [x] ElevationLimit
   - [ ]
 - [x] Type up maybe 2 scopes from 2 sites
-- [ ] Basic storage layer for localstorage loading and saving
+- [x] Basic storage layer for localstorage loading and saving
 - [ ] Storage into a database for cross-device syncing
 - [ ] Ephemeris layer
   - [ ] `astronomicalNight` - The astronomical night on a given `isoDate` string, `Temporal.Instant`, or `Temporal.PlainDate`
